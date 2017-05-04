@@ -54,6 +54,7 @@ const config = {
     eventColor: null,
     metaballs: true,
     zoomable: true,
+    displayedData: () => {},
 };
 
 config.dateFormat = config.locale
