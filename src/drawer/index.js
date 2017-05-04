@@ -78,7 +78,6 @@ export default (svg, dimensions, scales, configuration) => {
         delimiters(
             svg,
             scales,
-            configuration.labelsWidth + configuration.labelsRightMargin,
             configuration.dateFormat
         );
         drops(data);

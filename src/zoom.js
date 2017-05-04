@@ -1,4 +1,5 @@
 import xAxis from './xAxis';
+import { delimiters } from './drawer/delimiters';
 import labels from './drawer/labels';
 import { boolOrReturnValue } from './drawer/xAxis';
 import debounce from 'debounce';
@@ -44,6 +45,12 @@ export default (
                 });
 
             sumDataCount(data);
+
+            delimiters(
+                container,
+                { x: scalingFunction },
+                configuration.dateFormat
+            );
 
             if (callback) {
                 callback(data);
