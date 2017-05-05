@@ -18,13 +18,13 @@ export default (
         if (boolOrReturnValue(configuration.hasTopAxis, data)) {
             container
                 .selectAll('.x-axis.top')
-                .call(d3.axisTop().scale(scalingFunction));
+                .call(d3.axisTop().scale(scalingFunction).tickFormat(configuration.tickFormat));
         }
 
         if (boolOrReturnValue(configuration.hasBottomAxis, data)) {
             container
                 .selectAll('.x-axis.bottom')
-                .call(d3.axisBottom().scale(scalingFunction));
+                .call(d3.axisBottom().scale(scalingFunction).tickFormat(configuration.tickFormat));
         }
 
         const sumDataCount = debounce(
